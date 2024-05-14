@@ -1,0 +1,89 @@
+# Event Registration App
+
+This is a full-stack web application built with React, Express.js, and PostgreSQL. The application allows users to register for events by providing their personal details.
+
+## Features
+
+* User can register for events.
+* Backend API built with Express.js.
+* PostgreSQL database for storing user and event data.
+* Frontend built with React and Bootstrap for a responsive design.
+
+## Technologies Used
+
+* Frontend: React, Bootstrap
+* Backend: Node.js, Express.js
+* Database: PostgreSQL
+* ORM: Sequelize
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+* Node.js (v12.x or later)
+* npm or yarn
+* PostgreSQL (v12.x or later)
+* Git
+
+# Getting Started
+
+1. Clone the repository
+
+git clone https://github.com/yourusername/event-registration-app.git
+cd event-registration-app
+
+2. Install dependencies
+
+# For backend
+
+cd server
+npm install
+
+# For frontend
+
+cd ../client
+npm install
+
+3. Set up PostgreSQL Database
+
+Create a PostgreSQL database and update the database configuration in the backend. You can find the configuration file at server/config/config.json.
+
+{
+  "development": {
+    "username": "yourusername",
+    "password": "yourpassword",
+    "database": "event_registration",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
+
+4. Create Environment Variables
+
+Create a .env files like in examples: 
+
+/server/.env_example
+/crient/.env_example 
+
+5. Run Migrations and Seeders
+
+Navigate to the server directory and run the migrations and seeders:
+
+npx sequelize-cli db:migrate
+
+6. Start the Application
+
+Start the backend server:
+cd server
+npm start
+
+Start the frontend development server:
+
+cd ../client
+npm start
+
+Usage
+
+1. Open your browser and go to http://localhost:3000.
+2. Navigate to the registration page.
+3. Fill in your details and register for an event.

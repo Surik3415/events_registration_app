@@ -27,63 +27,19 @@ Before you begin, ensure you have met the following requirements:
 
 # Getting Started
 
-1. Clone the repository
+### 1. Clone the repository
 
+```
 git clone https://github.com/yourusername/event-registration-app.git
 cd event-registration-app
+```
 
-2. Install dependencies
+### 2. Install dependencies with `npm install` on client and server sile
 
-# For backend
+### 3. Set up PostgreSQL Database. Create a PostgreSQL database and update the database configuration in the backend. You can find the configuration file at `server/config/config.json`
 
-cd server
-npm install
+### 4. Create Environment Variables. Create a .env files like in examples:  `/server/.env_example` and `/crient/.env_example` 
 
-# For frontend
+### 5. Run Migrations. Navigate to the server directory and run the migrations and seeders: `npx sequelize-cli db:migrate`
 
-cd ../client
-npm install
-
-3. Set up PostgreSQL Database
-
-Create a PostgreSQL database and update the database configuration in the backend. You can find the configuration file at server/config/config.json.
-
-{
-  "development": {
-    "username": "yourusername",
-    "password": "yourpassword",
-    "database": "event_registration",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  }
-}
-
-4. Create Environment Variables
-
-Create a .env files like in examples: 
-
-/server/.env_example
-/crient/.env_example 
-
-5. Run Migrations and Seeders
-
-Navigate to the server directory and run the migrations and seeders:
-
-npx sequelize-cli db:migrate
-
-6. Start the Application
-
-Start the backend server:
-cd server
-npm start
-
-Start the frontend development server:
-
-cd ../client
-npm start
-
-Usage
-
-1. Open your browser and go to http://localhost:3000.
-2. Navigate to the registration page.
-3. Fill in your details and register for an event.
+### 6. Start the Application

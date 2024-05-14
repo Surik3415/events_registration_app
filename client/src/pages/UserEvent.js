@@ -1,12 +1,12 @@
 import React from "react";
-import {Container, Row} from "react-bootstrap";
-
+import {Container, Row} from "react-bootstrap"
+import UserEventList from "../components/UserEventList";
 
 const UserEvent = () => {
   return (
-    <Container>
+    <Container className="mt-4">
       <Row>
-        USER_EVENT
+        <UserEventList />
       </Row>
     </Container>
   )

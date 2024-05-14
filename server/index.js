@@ -19,7 +19,7 @@ app.use(cors())
 app.use(express.json())
 app.use('/api', router)
 
-//handler should be last
+// handler should be last
 app.use(errorHandler)
 
 

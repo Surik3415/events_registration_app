@@ -8,7 +8,7 @@ class EventController {
     limit = limit || 12
     let offset = (page*limit)- limit
 
-    const posts = await Event.findAll({limit,offset})
+    const posts = await Event.findAndCountAll({limit,offset})
     return res.json(posts)
   }
 

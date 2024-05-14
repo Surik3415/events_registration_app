@@ -1,15 +1,15 @@
 import { observer } from "mobx-react-lite";
 import { Container, Row } from "react-bootstrap";
-import EventList from "../components/EventList";
+import RegisterForm from "../components/RegisterForm";
 
-const Events = observer(() => {
+const Register = observer(() => {
   return (
     <Container className="mt-4">
       <Row>
-        <EventList />
+        <RegisterForm />
       </Row>
     </Container>
   );
 });
 
-export default Events;
+export default Register;

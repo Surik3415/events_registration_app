@@ -40,7 +40,16 @@ export default class EventStore{
     this._user_event = userEvent
   }
 
-  get userEvent(){
+  get userEvents(){
     return this._user_event
   }
+
+  addUserEvent(userEvent) {
+    this._user_event.push(userEvent);
+  }
+
+  findEventById(id) {
+    return this._events.find(event => event.id === id);
+  }
+
 }

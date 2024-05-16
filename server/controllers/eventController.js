@@ -2,6 +2,7 @@ const {Event, UserEvent} = require('../models/models')
 const ApiError = require('../errors/apiError')
 
 class EventController {
+  
   async getAll(req, res) {
     let {limit, page} = req.query
     page = page || 1
@@ -11,6 +12,7 @@ class EventController {
     const posts = await Event.findAndCountAll({limit,offset})
     return res.json(posts)
   }
+  
 
   async create(req, res, next) {
     try {

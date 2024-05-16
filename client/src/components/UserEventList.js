@@ -1,17 +1,12 @@
 import { observer } from "mobx-react-lite";
-import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Context } from "../index";
 
-const UserEventList = observer(() => {
-  const { id } = useParams();
-  const { events } = useContext(Context);
-
-  const userEvents = events._user_event.filter(userEvent => userEvent.event_id === parseInt(id));
+const UserEventList = observer(({ userEvents, eventTitle }) => {
 
   return (
     <Container className="mt-4">
+      <h3 className="mt-4 mb-4">'{eventTitle}' Participants</h3>
       <Row>
         {userEvents.map(userEvent => (
           <Col key={userEvent.id} md={4} className="mb-4">

@@ -1,13 +1,12 @@
 import React, { useState, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Container, Form, Button } from "react-bootstrap";
 import { Context } from "../index";
 import { regitstrate } from "../http/userEventAPI";
 
-const Register = () => {
+const Register = ({eventTitle}) => {
   const { id } = useParams();
-  const { events } = useContext(Context);
-  const event = events.findEventById(parseInt(id));
+  const navigate = useNavigate();
 
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,12 +20,13 @@ const Register = () => {
       fullName,
       birthDate: dob,
       userHearItFrom,
-      event_id: event.id,
+      event_id: parseInt(id),
     };
 
     try {
       const response = await regitstrate(newUserEvent);
       console.log("New User Event: ", response);
+      navigate('/events');
     } catch (error) {
       console.error("Registration failed: ", error);
     }
@@ -34,7 +34,7 @@ const Register = () => {
 
   return (
     <Container className="mt-4">
-      <h2>Register for Event {event ? event.title : "Loading..."}</h2>
+      <h2>Register for Event {eventTitle ? eventTitle : "Loading..."}</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="fullName">
           <Form.Label>Full Name</Form.Label>

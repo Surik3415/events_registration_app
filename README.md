@@ -21,7 +21,7 @@ This is a full-stack web application built with React, Express.js, and PostgreSQ
 Before you begin, ensure you have met the following requirements:
 
 * Node.js (v12.x or later)
-* npm or yarn
+* npm
 * PostgreSQL (v12.x or later)
 * Git
 

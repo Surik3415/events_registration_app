@@ -3,7 +3,7 @@
 This is a full-stack web application built with React, Express.js, and PostgreSQL. The application allows users to register for events by providing their personal details.
 
 ## Links
-* https://events-registration-app-c9h5.onrender.com/events - a link to the hosted site. Due to the fact that the hosting is free - it loads slowly
+* https://events-registration-app-c9h5.onrender.com/events - a link to the hosted site. Due to the fact that the hosting is free - it loads slowly (wait 2-3 minutes for the page to load for the first time)
 * https://drive.google.com/file/d/1KYwi0s3F8Ypi8mJ0nZcsLedc6P4EZKRE/view?usp=drive_link - a link to download a video demonstrating the program's operation
 
 ## Features
